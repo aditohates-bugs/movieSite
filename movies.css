@@ -60,6 +60,28 @@ nav{
     text-shadow: 0 0 10px #38bdf8;
 }
 
+.options_mobile{
+    display: none;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    gap: 5px;
+}
+
+.options_mobile span{
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #e0e0e0;
+    background:0.3s;
+}
+
+.options_mobile:hover span{
+    background:#38bdf8;
+}
+
 #btn{
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
@@ -104,7 +126,7 @@ nav{
     z-index: -1;
     background-size: cover;
     background-position: center;
-    filter: blur(15px) brightness(0.4);
+    backdrop-filter: blur(10px) brightness(0.4);
     transition: background-image 1.5s ease-in-out;
 }
 
@@ -162,6 +184,12 @@ nav{
 #book_button2{
     text-decoration: none;
     color: white;
+}
+
+#movie_title {
+    font-weight: 700;
+    color: #38bdf8;
+    word-break: break-word;
 }
 
 .extra_content{
@@ -498,7 +526,7 @@ footer{
     font-weight:500;
 }
  
-@media(width<750px){
+@media (max-width: 768px){
     nav{
         flex-wrap: wrap;
         justify-content: space-between;
@@ -507,6 +535,139 @@ footer{
     #Logo{
         margin-left:0;
         font-size:1.5rem;
-        order: 1;
+        
+    }
+    .movie-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .extra_content {
+        margin-top: 3rem;
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming_soon {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .posters {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .posters img {
+        width: 120px;
+        height: auto;
+    }
+
+    .promo_card {
+        padding: 15px;
+    }
+
+    #about_us {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 0 1.2rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .random_quotes {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    #adi {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #somepic {
+        width: 100%;
+        text-align: center;
+    }
+
+    #somepic img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        padding: 3rem 5% 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer_section {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .booking_main_content {
+        grid-template-columns: 1fr;
+        padding: 1rem 4%;
+        gap: 2rem;
+    }
+
+    .ticket_summary {
+        position: static;
+        padding: 1.2rem;
+    }
+
+    .ticket_summary h3 {
+        font-size: 1rem;
+    }
+
+    .ticket_summary p {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    #movie_title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #38bdf8;
+        word-break: break-word;
+    }
+
+    #confirm_booking_btn {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+
+    .screen {
+        width: 95%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 0.85rem;
+    }
+
+    .seat {
+        height: 15px;
+        width: 15px;
+    }
+
+    .legend {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
     }
 }
+
+    
+
